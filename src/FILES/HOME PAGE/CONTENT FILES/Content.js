@@ -9,11 +9,15 @@ import { context } from "../../Links";
 import { Link } from "react-router-dom";
 import { Footer } from "./Footer";
 import ArticleIcon from "@mui/icons-material/Article";
+import { useHistory } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
 export function Content() {
   // TO TOGGLE HIDE AND SHOW TOPBAR MENU:
   const { TbMenuBar, setTbMenuBar } = useContext(context);
   const styles = { opacity: TbMenuBar ? "0.3" : "1" };
+
+  const history = useHistory();
 
   return (
     <section
@@ -27,9 +31,15 @@ export function Content() {
         <p className="TbMyName">Panchatsharam</p>
       </article>
       <article data-aos="zoom-in-right" className="TBBio" id="TbBio-2">
-        <p>
-          <span>Full Stack Web Developer</span>
-        </p>
+        <Typewriter
+          loop={100}
+          cursor
+          cursorStyle="_"
+          typeSpeed={120}
+          deleteSpeed={50}
+          delaySpeed={1000}
+          words={["FULL STACK DEVELOPER"]}
+        />
       </article>
 
       <article data-aos="zoom-in-right" className="TbLinkBtnCtnr">
@@ -66,6 +76,9 @@ export function Content() {
 
       <>
         <ProjectData />
+        <p className="moreProjects" onClick={() => history.push("./projects")}>
+          Explore more →
+        </p>
       </>
 
       <>
