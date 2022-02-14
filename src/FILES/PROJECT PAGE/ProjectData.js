@@ -35,8 +35,7 @@ export function ProjectData() {
             Developed by <span>Ragavendiran Panchatsharam</span>
           </p>
           <p>
-            Built with <span>React JS</span>, <span>Node JS</span> &
-            <span>Mongo DB</span>
+            Built with <span>React JS</span>
           </p>
           <p>
             Hosted on <span>Netlify</span>

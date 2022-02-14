@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
+import ArticleIcon from "@mui/icons-material/Article";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -21,15 +21,14 @@ export function Footer() {
           </Button>
         </Link>
         <Link
-          to={{ pathname: "https://www.linkedin.com/signup" }}
+          to={{
+            pathname:
+              "https://drive.google.com/file/d/1e6NULI8fZkqkHThfOvHYGch2oin_zn7D/view?usp=sharing",
+          }}
           target="_blank"
         >
-          <Button
-            id="TbLinkBtn"
-            variant="outlined"
-            startIcon={<LinkedInIcon />}
-          >
-            LinkedIn
+          <Button id="TbLinkBtn" variant="outlined" startIcon={<ArticleIcon />}>
+            RESUME
           </Button>
         </Link>
         <Link to={{ pathname: "mailto:ragavinrap@gmail.com" }} target="_blank">
@@ -43,7 +42,7 @@ export function Footer() {
         Developed by <span>Ragavendiran Panchatsharam</span>
       </p>
       <p>
-        Built with <span>React JS</span> 
+        Built with <span>React JS</span>
       </p>
       <p>
         Hosted on <span>Netlify</span>

@@ -19,7 +19,7 @@ export function Content() {
   const { TbMenuBar, setTbMenuBar } = useContext(context);
   const styles = { opacity: TbMenuBar ? "0.3" : "1" };
 
-  // TO SHOW ERROR MESSAGE WHEN SERVER SIDE HAVING PROBLEM:
+  // TO SHOW ERROR MESSAGE WHEN SERVER SIDE HAVING P`ROBLEM:
   const [error, setError] = useState(true);
 
   useEffect(() => {
