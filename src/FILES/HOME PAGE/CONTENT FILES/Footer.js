@@ -23,7 +23,7 @@ export function Footer() {
         <Link
           to={{
             pathname:
-              "https://drive.google.com/file/d/1e6NULI8fZkqkHThfOvHYGch2oin_zn7D/view?usp=sharing",
+              "https://drive.google.com/file/d/1gTbxw54lb5E-vlsvGTy0i0t3bvHVsdY-/view?usp=sharing",
           }}
           target="_blank"
         >
