@@ -17,31 +17,67 @@ export function Projects({ data }) {
         </div>
 
         <div className="ProjectsTitleCtnr">
-          <div className="ProjectsTitle">
-            <p>{data.project_name}</p>
+          <p>{data.project_name}</p>
+          <div className="ProjectsTitle" id="ProjectsTitle">
             <div>
               <Link
                 to={{
-                  pathname: `${data.git_link}`,
+                  pathname: `${data.git_link_frn_end}`,
                 }}
                 target="_blank"
               >
-                <IconButton id="ProjectGitIcon" aria-label="GitHub">
-                  <GitHubIcon />
-                </IconButton>
+                <Button
+                  id="ProjectGitIcon"
+                  aria-label="Front End"
+                  variant="outlined"
+                  startIcon={<GitHubIcon />}
+                >
+                  FRONT END
+                </Button>
               </Link>
+
+              {data.git_link_bck_end ? (
+                <Link
+                  to={{
+                    pathname: `${data.git_link_bck_end}`,
+                  }}
+                  target="_blank"
+                >
+                  <Button
+                    id="ProjectGitIcon"
+                    aria-label="Back End"
+                    variant="outlined"
+                    startIcon={<GitHubIcon />}
+                  >
+                    BACK END
+                  </Button>
+                </Link>
+              ) : (
+                ""
+              )}
+
               <Link
                 to={{
                   pathname: `${data.netlify_link}`,
                 }}
                 target="_blank"
               >
-                <IconButton id="ProjectLaunchIcon" aria-label="Launch">
-                  <LaunchIcon />
-                </IconButton>
+                <Button
+                  id="ProjectLaunchIcon"
+                  aria-label="Launch"
+                  variant="outlined"
+                  startIcon={<LaunchIcon />}
+                >
+                  LIVE
+                </Button>
               </Link>
             </div>
           </div>
+
+          <div className="projectsDescription">
+            <p>{data.project_description}</p>
+          </div>
+
           <div className="projectLanguageBtn">
             {projLang.map((data, i) => (
               <Button
@@ -51,10 +87,7 @@ export function Projects({ data }) {
               >
                 {data}
               </Button>
-            ))}           
-          </div>
-          <div className="projectsDescription">
-            <p>{data.project_description}</p>
+            ))}
           </div>
         </div>
       </article>

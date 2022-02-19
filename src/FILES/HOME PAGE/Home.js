@@ -15,7 +15,7 @@ export function Home() {
 
   // ANIMATE ON SCROLL:
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 3000 });
   }, []);
 
   useEffect(() => {

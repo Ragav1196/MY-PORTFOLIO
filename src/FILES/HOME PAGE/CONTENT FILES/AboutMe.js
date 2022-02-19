@@ -1,9 +1,14 @@
 import ProfilePic from "../../ProfilePic.jpg";
 
 export function AboutMe() {
+
   return (
-    <section data-aos="fade-up" className="AbtMeCtnr">
-      <article>
+    <section
+      onScroll={() => console.log("ARAG")}
+      id="aboutMe"
+      className="AbtMeCtnr"
+    >
+      <article data-aos="fade-up">
         <h1>⚡ About Me</h1>
         <p>
           Hey! I'm <span>Ragav</span>, I've been fascinated by{" "}
@@ -20,7 +25,7 @@ export function AboutMe() {
           <span> binge watch movies</span>.
         </p>
       </article>
-      <article>
+      <article data-aos="flip-left">
         <img src={ProfilePic} alt="Profile" />
       </article>
     </section>

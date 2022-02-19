@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body h3 {
+  margin: 0px;
+}
+
+body h1 {
+  font-size: 35px !important;
+}
+
 *::-webkit-scrollbar {
   display: none;
 }

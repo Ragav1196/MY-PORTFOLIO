@@ -7,10 +7,12 @@ import { ProjectData } from "./PROJECT/ProjectData";
 import { useContext } from "react";
 import { context } from "../../Links";
 import { Link } from "react-router-dom";
-import { Footer } from "./Footer";
+import { Contacts } from "./Contacts";
 import ArticleIcon from "@mui/icons-material/Article";
 import { useHistory } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
+import { MySkills } from "./MySkills";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export function Content() {
   // TO TOGGLE HIDE AND SHOW TOPBAR MENU:
@@ -24,66 +26,105 @@ export function Content() {
       style={styles}
       onClick={() => setTbMenuBar(false)}
       className="TbContentCtnr"
+      id="home"
     >
-      <article data-aos="zoom-in-right" className="TBBio" id="TbBio-1">
-        <p>Hey there!, I'm-</p>
-        <p className="TbMyName">Ragavendiran</p>
-        <p className="TbMyName">Panchatsharam</p>
-      </article>
-      <article data-aos="zoom-in-right" className="TBBio" id="TbBio-2">
-        <Typewriter
-          loop={100}
-          cursor
-          cursorStyle="_"
-          typeSpeed={120}
-          deleteSpeed={50}
-          delaySpeed={1000}
-          words={["FULL STACK DEVELOPER"]}
-        />
+      <article className="TBBioCntr">
+        {/* TOP BAR BIO CONTAINER */}
+        <article data-aos="zoom-in-right" className="TBBio" id="TbBio-1">
+          <p>Hey there!, I'm-</p>
+          <p className="TbMyName">Ragavendiran Panchatsharam</p>
+        </article>
+        <article data-aos="zoom-in-right" className="TBBio" id="TbBio-2">
+          <Typewriter
+            loop={100}
+            cursor
+            cursorStyle="_"
+            typeSpeed={120}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            words={[
+              "FULL STACK DEVELOPER",
+              "FRONT-END DEVELOPER",
+              "BACK-END DEVELOPER",
+            ]}
+          />
+        </article>
+        {/* TOP BAR LINK BUTTONS CONTAINER */}
+        <article data-aos="zoom-in-right" className="TbLinkBtnCtnr">
+          <Link
+            to={{ pathname: "https://github.com/Ragav1196" }}
+            target="_blank"
+          >
+            <Button
+              id="TbLinkBtn"
+              variant="outlined"
+              startIcon={<GitHubIcon />}
+            >
+              Github
+            </Button>
+          </Link>
+
+          <Link
+            to={{
+              pathname:
+                "https://drive.google.com/file/d/1W_AWUXGF5kRI1zQunoxRbRcWGc_9l-TV/view?usp=sharing",
+            }}
+            target="_blank"
+          >
+            <Button
+              id="TbLinkBtn"
+              variant="outlined"
+              startIcon={<ArticleIcon />}
+            >
+              RESUME
+            </Button>
+          </Link>
+
+          <Link
+            to={{ pathname: "mailto:ragavinrap@gmail.com" }}
+            target="_blank"
+          >
+            <Button id="TbLinkBtn" variant="outlined" startIcon={<MailIcon />}>
+              Email
+            </Button>
+          </Link>
+
+          <Link
+            to={{
+              pathname:
+                "https://www.linkedin.com/in/ragav-ragavendiran-215781116/",
+            }}
+            target="_blank"
+          >
+            <Button
+              id="TbLinkBtn"
+              variant="outlined"
+              startIcon={<LinkedInIcon />}
+            >
+              LinkedIn
+            </Button>
+          </Link>
+        </article>
       </article>
 
-      <article data-aos="zoom-in-right" className="TbLinkBtnCtnr">
-        <Link to={{ pathname: "https://github.com/Ragav1196" }} target="_blank">
-          <Button id="TbLinkBtn" variant="outlined" startIcon={<GitHubIcon />}>
-            Github
-          </Button>
-        </Link>
-        <Link
-          to={{
-            pathname:
-              "https://drive.google.com/file/d/1gTbxw54lb5E-vlsvGTy0i0t3bvHVsdY-/view?usp=sharing",
-          }}
-          target="_blank"
-        >
-          <Button id="TbLinkBtn" variant="outlined" startIcon={<ArticleIcon />}>
-            RESUME
-          </Button>
-        </Link>
-        <Link to={{ pathname: "mailto:ragavinrap@gmail.com" }} target="_blank">
-          <Button id="TbLinkBtn" variant="outlined" startIcon={<MailIcon />}>
-            Email
-          </Button>
-        </Link>
-      </article>
+      {/* ABOUT ME CONTAINER */}
+      <AboutMe />
 
-      <>
-        <AboutMe />
-      </>
+      {/* MY SKILLS CONTAINER */}
+      <MySkills />
 
-      <>
+      {/* PROJECT CONTAINER */}
+      <article className="ProjectMainCntr" id="project">
         <ProjectsHeading />
-      </>
-
-      <>
         <ProjectData />
-        <p className="moreProjects" onClick={() => history.push("./projects")}>
+
+        <p className="moreProjects" onClick={() => history.push("/projects")}>
           Explore more →
         </p>
-      </>
+      </article>
 
-      <>
-        <Footer />
-      </>
+      {/* KEEP IN TOUCH CONTAINER */}
+      <Contacts />
     </section>
   );
 }

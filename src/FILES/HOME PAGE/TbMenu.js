@@ -1,13 +1,9 @@
-import Button from "@mui/material/Button";
 import CloseIcon from "@mui/icons-material/Close";
 import IconButton from "@mui/material/IconButton";
 import { useContext } from "react";
 import { context } from "../Links";
-import { useHistory } from "react-router-dom";
 
 export function TbMenu() {
-  const history = useHistory();
-
   // TO TOGGLE HIDE AND SHOW TOPBAR MENU:
   const { TbMenuBar, setTbMenuBar } = useContext(context);
   const styles = {
@@ -17,7 +13,7 @@ export function TbMenu() {
   return (
     <section style={styles} className="TbMenuCtnr">
       <article>
-        <h1>MENU BAR</h1>
+        <h3>MENU BAR</h3>
         <IconButton
           id="closeMenuBar"
           onClick={() => setTbMenuBar(false)}
@@ -27,26 +23,11 @@ export function TbMenu() {
         </IconButton>
       </article>
       <article>
-        <Button
-          onClick={() => {
-            setTbMenuBar(false);
-            history.push("/");
-          }}
-          id="tbMenuHomeBtn"
-          variant="text"
-        >
-          HOME
-        </Button>
-        <Button
-          onClick={() => {
-            setTbMenuBar(false);
-            history.push("/project");
-          }}
-          id="tbMenuProjectsBtn"
-          variant="text"
-        >
-          PROJECTS
-        </Button>
+        <a href="#home">HOME</a>
+        <a href="#aboutMe">ABOUT</a>
+        <a href="#MySkills">SKILLS</a>
+        <a href="#project">PROJECTS</a>
+        <a href="#contactMe">CONTACT</a>
       </article>
     </section>
   );

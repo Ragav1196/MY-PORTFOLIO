@@ -2,17 +2,32 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { context } from "../Links";
 import { Projects } from "./Projects";
+import Button from "@mui/material/Button";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { Link } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
+import { useHistory } from "react-router-dom";
 
 export function ProjectData() {
   // TO GET PROJECT DETAILS:
   const { PrjDetails } = useContext(context);
 
   const { project } = useParams();
+  const history = useHistory();
 
   return (
     <section className="projPagePjDataContr">
       {project ? (
-        <article data-aos="slide-left" className="projectPageHeading">
+        <article data-aos="slide-right" className="projectPageHeading">
+          <Button
+            onClick={() => history.push("/")}
+            id="TbLinkBtn"
+            variant="outlined"
+            startIcon={<HomeIcon />}
+          >
+            GO HOME
+          </Button>
+
           <h1>LIST OF ALL PROJECTS</h1>
           <p>
             I love building projects and practice my engineering skills, here's

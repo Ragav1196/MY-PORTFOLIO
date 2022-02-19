@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { TbMenu } from "../HOME PAGE/TbMenu";
-import { TopBar } from "../HOME PAGE/TopBar";
+import { TopBar } from "./TopBar";
 import { context } from "../Links";
 import { ProjectData } from "./ProjectData";
 import Aos from "aos";
@@ -15,11 +15,7 @@ export function Content() {
   // TO GET PROJECT DETAILS:
   const { PrjDetails } = useContext(context);
 
-  // TO TOGGLE HIDE AND SHOW TOPBAR MENU:
-  const { TbMenuBar, setTbMenuBar } = useContext(context);
-  const styles = { opacity: TbMenuBar ? "0.3" : "1" };
-
-  // TO SHOW ERROR MESSAGE WHEN SERVER SIDE HAVING P`ROBLEM:
+  // TO SHOW ERROR MESSAGE WHEN SERVER SIDE HAVING PROBLEM:
   const [error, setError] = useState(true);
 
   useEffect(() => {
@@ -36,12 +32,7 @@ export function Content() {
         <>
           <TopBar />
           <article>
-            <TbMenu />
-            <div
-              style={styles}
-              onClick={() => setTbMenuBar(false)}
-              className="TbContentCtnr"
-            >
+            <div className="TbContentCtnr projTbContentCtnr">
               <ProjectData />
             </div>
           </article>
