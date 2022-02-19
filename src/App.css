@@ -104,13 +104,17 @@ html {
 
 /* CONTENT: */
 .TbContentCtnr {
-  padding: 65px 20px;
+  padding: 0px 20px;
   transition: all 0.5s;
+  padding-bottom: 40px;
 }
 
 .TBBioCntr {
-  padding-top: 100px;
-  padding-bottom: 90px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .TbMyName {
@@ -690,18 +694,13 @@ html {
   .contactMeCntr {
     margin-left: 200px;
   }
-
-  .TBBioCntr {
-    padding-top: 130px;
-    padding-bottom: 170px;
-  }
 }
 
 @media (min-width: 920px) {
   /* HOME PAGE: */
   .TbContentCtnr {
-    padding: 200px 10%;
-    padding-bottom: 100px;
+    padding: 0px 10%;
+    padding-bottom: 40px;
   }
 
   .projTbContentCtnr {
@@ -745,10 +744,6 @@ html {
     flex-direction: row;
     gap: 100px;
     align-items: unset;
-  }
-
-  .TBBioCntr {
-    padding-top: 45px;
   }
 
   .AbtMeCtnr {
