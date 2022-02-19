@@ -117,11 +117,13 @@ export function Contacts() {
                 placeholder="Subject"
                 name="subject"
               />
-              <input
+              <textarea
                 style={errorMailSentBorderStyles}
                 type="text"
                 placeholder="Message....."
                 name="message"
+                cols="30"
+                rows="5"
               />
               <button type="submit">{mailSent ? "SENDING...." : "SEND"}</button>
             </div>

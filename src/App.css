@@ -2,6 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
+html button:active {
+  transform: translateY(5px);
+}
+
+html button:hover,
+html button:hover svg > path {
+  color: rgb(172, 111, 68) !important;
+}
+
 .App,
 .PDFMainCntr {
   font-family: "Quicksand", sans-serif;
@@ -374,20 +383,38 @@ html {
 
 #reactIcon {
   background-color: #5bceee7e;
+  border: none;
+}
+
+#reactIcon:active,
+#mongodbIcon,
+#nodejsIcon,
+#mockapiIcon {
+  transform: unset;
+}
+
+#reactIcon:hover,
+#mongodbIcon,
+#nodejsIcon,
+#mockapiIcon {
+  color: inherit !important;
 }
 
 #mongodbIcon {
   background-color: #4e8e45;
+  border: none;
 }
 
 #nodejsIcon {
   background-color: #f1f1e6;
-  color: #000000;
+  border: none;
+  color: #000000 !important;
 }
 
 #mockapiIcon {
   background-color: #e19109;
-  color: #000000;
+  border: none;
+  color: #000000 !important;
 }
 
 #githubapiIcon {
@@ -463,6 +490,10 @@ html {
   cursor: pointer;
 }
 
+.contactMeCntr > form button:hover {
+  color: black !important;
+}
+
 .contactMeCntr * {
   font-size: initial;
   color: black;
@@ -471,6 +502,11 @@ html {
 .contactMeCntr > form input {
   margin-bottom: 10px;
   height: 30px;
+}
+
+.contactMeCntr > form textarea {
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .contactMeCntr > form > div {
@@ -570,11 +606,16 @@ html {
 
 /* PROJECT PAGE FOOTER: */
 .projDataContr > article {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 50px;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 100px;
+  justify-items: center;
 }
 
 .projectFooter {
@@ -693,6 +734,10 @@ html {
 
   .contactMeCntr {
     margin-left: 200px;
+  }
+
+  .projDataContr > article {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
