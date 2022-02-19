@@ -1,7 +1,6 @@
 import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
-import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
 
 export function Projects({ data }) {

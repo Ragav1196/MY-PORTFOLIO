@@ -3,8 +3,6 @@ import { useParams } from "react-router-dom";
 import { context } from "../Links";
 import { Projects } from "./Projects";
 import Button from "@mui/material/Button";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import { useHistory } from "react-router-dom";
 
