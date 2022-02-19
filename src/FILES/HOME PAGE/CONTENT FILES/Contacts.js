@@ -161,7 +161,7 @@ export function Contacts() {
           <Link
             to={{
               pathname:
-                "https://drive.google.com/file/d/1W_AWUXGF5kRI1zQunoxRbRcWGc_9l-TV/view?usp=sharing",
+                "https://drive.google.com/file/d/1N63xRT82-fGpRRUAIgyxGV0-h-9aPYeL/view?usp=sharing",
             }}
             target="_blank"
           >
